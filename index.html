@@ -6,29 +6,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calender.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Document</title>
 </head>
 
 <body>
-    <div class="clock">
-        <div class="hand hour" data-hour-hand></div>
-        <div class="hand miniute" data-minute-hand></div>
-        <div class="hand second" data-second-hand></div>
-        <div class="number number1"><span>|</span></div>
-        <div class="number number2"><span>|</span></div>
-        <div class="number number3"><span>3</span></div>
-        <div class="number number4"><span>|</span></div>
-        <div class="number number5"><span>|</span></div>
-        <div class="number number6"><span>6</span></div>
-        <div class="number number7"><span>|</span></div>
-        <div class="number number8"><span>|</span></div>
-        <div class="number number9"><span>9</span></div>
-        <div class="number number10"><span>|</span></div>
-        <div class="number number11"><span>|</span></div>
-        <div class="number number12"><span>12</span></div>
+<div class="title-container">
+    <h1 class="title">India Standard Time</h1>
+</div>
+<div class="container">
+    <div>
+        <section class="clock-container">
+            <div class="clock">
+                <div class="hand hour" data-hour-hand></div>
+                <div class="hand miniute" data-minute-hand></div>
+                <div class="hand second" data-second-hand></div>
+                <div class="number number1"><span>|</span></div>
+                <div class="number number2"><span>|</span></div>
+                <div class="number number3"><span>3</span></div>
+                <div class="number number4"><span>|</span></div>
+                <div class="number number5"><span>|</span></div>
+                <div class="number number6"><span>6</span></div>
+                <div class="number number7"><span>|</span></div>
+                <div class="number number8"><span>|</span></div>
+                <div class="number number9"><span>9</span></div>
+                <div class="number number10"><span>|</span></div>
+                <div class="number number11"><span>|</span></div>
+                <div class="number number12"><span>12</span></div>
+            </div>
+        </section>
+        <button id="alarm" class="alarm">Set Alarm</button>
+        <div class="upcomingAlarm">
+            <h3>Upcoming alarm</h3>
+            <div>
+                <p id="upcomingAla"></p>
+                <button id="removeAla" ><i class="far fa-trash-alt"></i></button>
+            </div>
+        </div>
     </div>
+    <section>
+        <div>
+            <div class="calender-container">
+                <div class="calender">
+                    <div class="month">
+                        <i id="prev" class="fas fa-angle-left"></i>
+                        <div class="date">
+                            <h1>May</h1>
+                            <p>Fir May 29,2020</p>
+                        </div>
+                        <i id="next" class="fas fa-angle-right"></i>
+                    </div>
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="days">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
-    <script src="./main.js"></script>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span id="closeButton" class="close-button">&times;</span>
+        <div class="alarm-container">
+            <div>
+                <div id="inc-hour" class="alarm-ind">+</div>
+                <div class="alarm-hours set-alarm">
+                    <span></span>
+                </div>
+                <div id="dsc-hour" class="alarm-ind">-</div>
+            </div>
+            <span class="alarm-separator">:</span>
+            <div>
+                <div id="incMin" class="alarm-ind">+</div>
+                <div class="alarm-minute set-alarm">
+                    <span></span>
+                </div>
+                <div id="dscMin" class="alarm-ind">-</div>
+            </div>
+        </div>
+        <button id="set-alarm">Select</button>
+    </div>
+</div>
+
+<div id="wakeUpModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div id="setIns" class="alarm-container">
+            <div>
+                <h3>Wake Up ...............</h3>
+            </div>
+            <button id="stop">Stop</button>
+            <button id="snooze">Snooze</button>
+        </div>
+    </div>
+</div>
+
+<script src="./main.js"></script>
+<script src="./calender.js"></script>
 </body>
 
 </html>
